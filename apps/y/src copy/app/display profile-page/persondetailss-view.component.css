@@ -1,0 +1,26 @@
+body {
+    background-image: url("/assets/images/networkbgimage.png");
+    width: 100%;
+    height: 100%;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  
+      
+
+}
+
+.title {
+    font-family: dosis;
+}
+
+.header {
+    font-family: dosis;
+}
+
+a {
+    font-family: dosis;
+    margin-top: 40px;
+    margin-left: 75px;
+}

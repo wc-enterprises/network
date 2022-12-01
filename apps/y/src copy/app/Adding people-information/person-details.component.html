@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="border-b-4 border-white w-[100%] h-[10%]">
+        <span class="header bg-white w-[10vw] h-[6vh] absolute ml-[5vw] mt-[1.7vh] flex">
+            <img src="/assets/networklogo.png" class="w-[2vw] ml-1" />
+            <span class="font-bold text-2xl text-center text-black ml-3 mt-1.5">NETWORK</span>
+            <div class="ml-[3vw]">
+                <button
+                    class="header bg-white hover:bg-gray-300 text-black font-semibold py-1 px-2 rounded mt-2 border border-black">
+                    +Add
+                </button>
+            </div>
+            <app-profile-dropdown></app-profile-dropdown>
+        </span>
+    </div>
+    <form #personForm="ngForm" (submit)="getData(personForm.value)"
+        class="w-[70%] h-[78%] ml-[15vw] bg-white/50 mt-[6vh] border border-black rounded-2xl flex flex-col item-center">
+        <div class="flex flex-row justify-center">
+            <button class="header font-semibold border-2 border-black mt-[3vh] w-[15vw] h-[5vh] rounded bg-white/60">
+                Add Person Details
+            </button>
+        </div>
+
+        <div class="flex flex-row w-full">
+            <div class="w-1/2 h-[85%] mt-[8vh]">
+                <div class="w-[45%] h-[90%] ml-[11vw] mt-[3vh] flex flex-col space-y-8">
+                    <input type="Text" name="name" ngModel
+                        class="header block w-[20vw] px-8 py-1.5 font-semibold text-gray-700 bg-white bg-clip-padding border border-solid rounded m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+                        placeholder="Full Name" />
+
+                    <chips-autocomplete-example></chips-autocomplete-example>
+
+                    <input type="Text" ngModel name="location"
+                        class="header block w-[20vw] px-8 py-1.5 font-semibold text-gray-700 bg-white bg-clip-padding border border-solid rounded m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+                        placeholder="Place" />
+
+                    <input type="number" ngModel name="Contact" type="Text"
+                        class="header block w-[20vw] px-8 py-1.5 font-semibold text-gray-700 bg-white bg-clip-padding border border-solid rounded m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+                        placeholder="Contact Number" />
+
+                    <input type="text" ngModel name="instagram" type="Text"
+                        class="header block w-[20vw] px-8 py-1.5 font-semibold text-gray-700 bg-white bg-clip-padding border border-solid rounded m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+                        placeholder="Instagram" />
+                </div>
+            </div>
+            <div class="w-1/2 h-[90%] mt-[7vh] ml-[-7vw] space-y-8">
+                <div class="w-[35vh] ml-[10vw] mt-[4vh] flex flex-col space-y-8">
+                    <input type="text" ngModel type="Text"
+                        class="header block w-[20vw] px-8 py-1.5 font-semibold text-gray-700 bg-white bg-clip-padding border border-solid rounded m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+                        placeholder="Facebook" />
+
+                    <input ngModel type="Text"
+                        class="header block w-[20vw] px-8 py-1.5 font-semibold text-gray-700 bg-white bg-clip-padding border border-solid rounded m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+                        placeholder="LinkedIn" />
+
+                    <div type="text" ngModel
+                        class="header block w-[20vw] px-8 py-2 font-semibold text-gray-700 bg-white bg-clip-padding border border-solid rounded m-0">
+                        <label class="font-semibold text-gray-500">Photo</label>
+                        <input type="file" name="profile_pic" accept=".jpg, .jpeg, .png" />
+                    </div>
+                    <input ngModel type="Text"
+                        class="header block w-[20vw] px-8 py-10 font-semibold text-gray-700 bg-white bg-clip-padding border border-solid rounded m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none"
+                        placeholder="Description" />
+                </div>
+            </div>
+            <button routerLink="/profilepage"
+                class="h-[5vh] mt-[60vh] ml-[-32vw] header bg-white hover:bg-gray-300 text-black font-semibold py-1 px-6 rounded border-2 border-black">
+                Submit
+            </button>
+        </div>
+    </form>
+</body>
+
+</html>

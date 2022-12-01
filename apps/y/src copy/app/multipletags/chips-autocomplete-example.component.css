@@ -1,0 +1,24 @@
+.example-chip-list {
+  width: 20vw;
+}
+::placeholder {
+  color: gray;
+  opacity: 2; /* Firefox */
+  font-family: dosis;
+ font-weight: 600;
+padding-left: 10%;
+resize: both;
+ 
+}
+.header{
+   font-family: dosis; 
+}
+.scrollbox{
+    overflow: hidden;
+                overflow-y: auto;
+                
+}
+.scrollbox::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth;
+}

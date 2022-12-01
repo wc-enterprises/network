@@ -1,0 +1,17 @@
+body {
+    background-image: url("/assets/images/networkbgimage.png");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.header {
+    font-family: dosis;
+}
+::placeholder {
+    color: gray;
+   
+  }
