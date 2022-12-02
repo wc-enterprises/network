@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="border-b-4 border-white w-[100%] h-[10%]">
+        <span class="header bg-white w-[10vw] h-[6vh] absolute  ml-[5vw] mt-[1.7vh] flex">
+            <img src="/assets/networklogo.png" class="w-[2vw] ml-1">
+            <span class="font-bold text-2xl text-center text-black ml-3 mt-1.5">NETWORK</span>
+            <div class="ml-[3vw]"><button routerLink="/person-details"
+                    class="header bg-white hover:bg-gray-300 text-black font-semibold py-1 px-2 rounded mt-2 border-2 border-black">
+                    +Add
+                </button></div>
+            <app-profile-dropdown></app-profile-dropdown>
+        </span>
+
+
+    </div>
+    <div class="w-[70%] h-[78%] bg-white/50 ml-[15vw] mt-[6vh] border border-black rounded-2xl">
+
+
+
+
+        <div class="flex justify-center h-[13vh]">
+            <div class="bg-[#2f4550] mt-6 w-[6vw] h-[4.5vh] ml-[-23vw] rounded"><button routerLink="/profilepage"
+                    class="flex text-center pl-2 pt-1 text-white header gap-2 font-semibold ">
+                    <img class="h-6 mt-1" src="/assets/images/backbutton.png">Back</button>
+            </div><button
+                class="text-lg  items-center pl-10 header ml-[23vw] flex w-[12vw] h-[6vh] bg-white/60 text-black mt-5 font-semibold rounded-md border-2 border-black hover:bg-gray-200">
+                Person Detail's</button>
+
+        </div>
+
+        <div class="w-[45vw] h-[46vh]  ml-[13vw] mt-[5vh] flex bg-[#2F4550]/70">
+            <div class="w-[15vw] h-[46vh]">
+                <img class="w-[14vw] h-[45vh]  mt-1 ml-2" src="/assets/images/arun 3.png">
+            </div>
+            <div class="w-[29vw] h-[45vh]  mt-1">
+                <div class="w-[29vw] h-[15vh] bg-white/50">
+                    <div class="w-[29vw]   h-[5vh] text-center text-black header text-3xl font-bold">
+                        {{getid.name}}</div>
+                    <div class=" w-[29vw] h-[9vh] ml-2 wrap header font-semibold text-black">
+                        {{getid.people}}</div>
+                </div>
+                <div class="w-[29vw] h-[30vh] border border-white/50 header">
+                    <div class="flex space-x-[12vw] w-[29vw] h-[5vh] text-white font-semibold">
+                        <div class="flex items-center pl-2 gap-2"><img src="/assets/images/location.png">{{getid.place}}
+                        </div>
+                        <div class="flex items-center gap-1"><img src="/assets/images/contact.png">{{getid.contact}}
+                        </div>
+                    </div>
+                    <div class="flex space-x-[10vw]  w-[29vw] h-[5vh] text-white font-semibold mt-1">
+                        <div class="flex items-center pl-2 gap-2"><img src="/assets/images/insta.png">{{getid.instaId}}
+                        </div>
+                        <div class="flex items-center pl-3 gap-2"><img
+                                src="/assets/images/facebook.png">{{getid.facebookId}}
+                        </div>
+                    </div>
+                    <div class=" w-[29vw] h-[5vh] flex text-white font-semibold pl-2 gap-2 items-center mt-1">
+                        <img class="h-6" src="/assets/images/linkedin.png">
+                        {{getid.linkedIn}}
+                    </div>
+                    <div class="flex text-white font-semibold items-center pl-2 gap-2 mt-3"><img class="h-6 mt-[-4vh]"
+                            src="/assets/images/description.png">{{getid.description}}</div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <img class="ml-[63vw] mt-[-29vh] h-[5vh]" (click)="next()" src="/assets/images/rigtharrow.png">
+
+
+        <img (click)="prev()" class="ml-[6vw] mt-[-5.5vh] h-[5vh]" src="/assets/images/leftarrow.png">
+    </div>
+
+    <!-- <ul>
+        <li *ngFor="let user of users let userid=index">   
+            <button type="button" (click)="next(user, getid.userid)">Next</button>
+            <button type="button" (click)="previous(user, userid)">Previous</button>
+
+        </li>
+    </ul> -->
+
+
+
+</body>
+
+</html>
