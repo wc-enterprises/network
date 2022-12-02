@@ -15,7 +15,12 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/network/tsconfig.app.json",
         "assets": ["apps/network/src/favicon.ico", "apps/network/src/assets"],
-        "styles": ["apps/network/src/styles.css"],
+        
+         "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "apps/network/src/styles.css"
+             
+            ],
         "scripts": []
       },
       "configurations": {
