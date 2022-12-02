@@ -1,0 +1,98 @@
+<html *ngIf="showProfilePage">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="border-b-4 border-white w-[100%] h-[10%]">
+        <span class="header bg-white w-[10vw] h-[6vh] absolute ml-[5vw] mt-[1.7vh] flex">
+            <img src="/assets/networklogo.png" class="w-[2vw] ml-1" />
+            <span class="font-bold text-2xl text-center text-black ml-3 mt-1.5">NETWORK</span>
+            <div class="ml-[3vw]">
+                <button routerLink="/person-details"
+                    class="header bg-white hover:bg-gray-300 text-black font-semibold py-1 px-2 rounded mt-2 border-2 border-black">
+                    +Add
+                </button>
+            </div>
+
+            <app-profile-dropdown></app-profile-dropdown>
+        </span>
+    </div>
+
+    <div class="w-[83%] h-[82%] bg-white/60 ml-[9vw] mt-[6vh] border border-black rounded-2xl">
+        <div class="w-[14vw] p-2 h-[6vh] ml-[34vw] mt-[2vh] flex gap-2 font-semibold header text-xl border-2 border-black item-center rounded-md bg-white"
+            (click)="showElements1 = !showElements1">
+            <img class="ml-[2vw] h-7" src="/assets/images/filter 1.png" />Tag
+            Filter's
+        </div>
+        <div *ngIf="showElements1">
+            <form class="mt-[17.5vh] ml-[15.6vw] gap-3">
+                <fieldset class="border-2 border-black h-[31vh]">
+                    <div>
+                        <input class="ml-[1vw]" type="checkbox" id="Intresting" name="interest" value="Intresting" />
+                        &nbsp;
+                        <label for="Intresting">Intresting People</label>
+                    </div>
+                    <div>
+                        <input class="ml-[1vw]" type="checkbox" id="Business" name="interest" value="Business" />
+                        &nbsp;
+                        <label for="Business">Business People</label>
+                    </div>
+                    <div>
+                        <input class="ml-[1vw]" type="checkbox" id="Idea" name="interest" value="Idea" />
+                        &nbsp;
+                        <label for="Idea">Idea People</label>
+                    </div>
+                    <div>
+                        <input class="ml-[1vw]" type="checkbox" id="Entertainment" name="interest"
+                            value="Entertainment" />
+                        &nbsp;
+                        <label for="Entertainment">Entertainment People</label>
+                    </div>
+                    <div>
+                        <input class="ml-[1vw]" type="checkbox" id="Talented" name="interest" value="Talented" />
+                        &nbsp;
+                        <label for="Talented">Talented People</label>
+                    </div>
+                    <div>
+                        <input class="ml-[1vw]" type="checkbox" id="Startup" name="interest" value="Startup" />
+                        &nbsp;
+                        <label for="Startup">Startup plan People</label>
+                    </div>
+                    <div class="ml-7 mt-4 flex gap-12">
+                        <button
+                            class="space-x-4 header pl-3 pb-1 flex items-center border-2 border-black w-[65px] h-[24px] rounded-md font-semibold text-base bg-[#7C6F6F] text-white">
+                            Apply
+                        </button>
+                        <button
+                            class="header pl-2 pb-1 border-2 border-black flex items-center w-[65px] h-[24px] font-semibold text-base rounded-md bg-[#7C6F6F] text-white">
+                            Cancel
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="h-5"></div>
+        <div class="flex justify-center"></div>
+
+        <div class="w-[90%] h-[80%] ml-[2vw] scrollbox">
+            <div class="w-[85%] h-[38%] flex ml-[9vw] mt-[2vh] gap-10 flex-wrap scale-85">
+                <div *ngFor="let user of users"
+                    class="w-[20%] h-[120%] bg-white/60 border-[3px] border-black transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                    [routerLink]="['/persondetailss-view', user.userid]">
+                    <div routerLink="/app-persondetailss-view" class="w-[90%] h-[70%] ml-1.5 mt-2">
+                        <img class="h-[100%] ml-3" src="{{ user.image }}" />
+                    </div>
+                    <div class="w-[100%] h-[20%] bg-white mt-3">
+                        <h5>Name:{{ user.name }}<br />Place:{{ user.place }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<app-persondetailss-view *ngIf="showPersonDetailsView" [receiver]="currentUser"></app-persondetailss-view>

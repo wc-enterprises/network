@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <div class="border-b-4 border-white w-[100%] h-[10%]">
+        <span class="header bg-white w-[10vw] h-[6vh] absolute  ml-[5vw] flex mt-[1.7vh]" (click)="goTowelcome()">
+            <img src="/assets/networklogo.png" class="w-[2vw] ml-1">
+            <span class="font-bold text-2xl text-center text-black ml-3 mt-1.5">NETWORK
+
+            </span>
+            <div class="ml-[75vw] mt-2.5"><button (click)="goTosignuppage()"
+                    class="header bg-white hover:bg-gray-300 text-black font-semibold py-1 px-4 rounded-md border-2 border-black">
+                    SignUp
+                </button></div>
+
+
+        </span>
+
+    </div>
+
+    <!-- <div class="w-[40%] h-[40%] bg-white/30 ml-[28vw] mt-[25vh] border border-black rounded-2xl ">
+        <span class="mt-[3vh] flex justify-center"><button
+                class="py-1 px-2 pb-1 header bg-white text-black font-semibold rounded-md border-2 border-black"
+                href="https://www.google.com/" target="_blank">Login</button>
+        </span>
+        <div class="flex justify-center">
+            <div class="mb-3 w-[35vh] mt-[3vh]">
+
+                <input type="text" name="name" class="
+                        header
+                         w-full
+                          px-3
+                          py-1.5
+                          font-semibold
+                          text-black
+                          bg-white bg-clip-padding
+                          border border-solid border-gray-300
+                          rounded 
+                          m-0
+                          focus:text-black focus:bg-white focus:border-blue-600 focus:outline-none
+                        " placeholder="User Name" />
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="mb-3 w-[35vh] mt-[3vh]">
+
+                <input type="password" name="password" class="
+                        header
+                         w-full
+                          px-3
+                          py-1.5
+                          font-semibold
+                          text-gray-700
+                          bg-white bg-clip-padding
+                          border border-solid border-gray-300
+                          rounded
+                          m-0
+                          focus:text-gray-700 focus:bg-white focus  :border-blue-600 focus:outline-none
+                        " placeholder="Password" />
+            </div>
+        </div>
+
+        <span class="mt-[3vh] flex justify-center"><button (click)="formData()" routerLink="/profilepage"
+                class="header bg-white hover:bg-gray-300 text-black font-semibold py-1 px-2 rounded-md border-2 border-black">
+                Submit
+            </button>
+        </span>
+        <!-- <span class="mt-[3vh] flex justify-center ml-[5vw]"><button (click)="LoadData()"
+                    class="header bg-white hover:bg-gray-300 text-black font-semibold py-1 px-2 rounded-md border-2 border-black">
+                    LoadData
+                </button>
+            </span> -->
+
+    <!-- <h1>{{logindata.id}}</h1>
+        <h2>{{logindata.username}}</h2>
+        <h3>{{logindata.password}}</h3> -->
+
+
+
+
+    <!-- </div> -->
+
+    <form class="formgroup w-[40%] h-[40%] bg-white/30 ml-[28vw] mt-[25vh] border border-black rounded-2xl "
+        [formGroup]="loginpage" (ngSubmit)="onSubmit()">
+
+        <span class="mt-[3vh] flex justify-center"><button
+                class="py-1 px-2 pb-1 header bg-white text-black font-semibold rounded-md border-2 border-black"
+                href="https://www.google.com/" target="_blank">Login</button>
+        </span>
+        <div class="flex justify-center">
+            <div class="mb-3 w-[35vh] mt-[3vh]">
+                <input class=" header
+                         w-full
+                          px-3
+                          py-1.5
+                          font-semibold
+                          text-black
+                          bg-white bg-clip-padding
+                          border border-solid border-gray-300
+                          rounded 
+                          m-0focus:text-black focus:bg-white focus:border-blue-600 focus:outline-none
+                        " type="text" id="username" placeholder="Username" formControlName="username" />
+                <small class="text-red-600 pt-1" *ngIf="vusername && vusername.invalid && vusername.touched">Username is
+                    Required</small>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="mb-3 w-[35vh] mt-[3vh]">
+                <input class=" header
+                         w-full
+                          px-3
+                          py-1.5
+                          font-semibold
+                          text-gray-700
+                          bg-white bg-clip-padding
+                          border border-solid border-gray-300
+                          rounded
+                          m-0
+                          focus:text-gray-700 focus:bg-white focus  :border-blue-600 focus:outline-none"
+                    type="password" id="password" placeholder="Password" formControlName="password" />
+                <small class="text-red-600 pt-1" *ngIf="vpassword && vpassword.invalid && vpassword.touched">Use 8
+                    or more
+                    characters with a mix
+                    of
+                    letters, numbers & symbols</small>
+            </div>
+        </div>
+        <span class="mt-[3vh] flex justify-center"><button
+                class="header bg-white hover:bg-gray-300 text-black font-semibold py-1 px-2 rounded-md border-2 border-black"
+                [disabled]="loginpage.invalid" id="submit">Submit</button></span>
+
+
+    </form>
+
+
+
+</body>
+
+</html>
