@@ -255,7 +255,7 @@ export class PersondetailssViewComponent implements OnInit {
     },
   ];
   currentIndex: any;
-  currentUser;
+  currentUser: any;
 
   @Input() receiver: any;
   ngOnInit(): void {
