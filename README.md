@@ -1,11 +1,10 @@
 # Add angular app
-
 nx generate @nrwl/angular:app <app-name> --routing
 
 # Add nest app
-
 nx generate @nrwl/nest:app <app-name>
-
+  
+# Run apps
 To run an app, execute following command in route folder
 npx nx s <api-name>
 eg: npx nx s api , npx nx s network
