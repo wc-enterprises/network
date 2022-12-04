@@ -70,6 +70,7 @@
         "@nestjs/platform-express": "^9.0.0",
         "@nestjs/typeorm": "^9.0.1",
         "@nrwl/angular": "^15.2.1",
+        "axios": "^1.2.0",
         "crypto-js": "^4.1.1",
         "ng-image-slider": "^6.1.0",
         "ng-multiselect-dropdown": "^1.0.0-beta.19",
