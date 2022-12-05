@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header">
+          <img
+            class="img"
+            (click)="goTohome()"
+            src="../../assets/img/logo.png"
+            alt=""
+          />
+          <button id="add" (click)="goToaddprofile()"><b>+ Add</b></button>
+          <div>
+            <button id="profile" (click)="showelements = !showelements">
+              <b>Profile</b>
+              <img class="h-6 w-6" src="../../assets/img/profile.png" alt="" />
+            </button>
+          </div>
+          <div id="profilebox" *ngIf="showelements">
+            <p class="flex pl-4">
+              Username: {{ userdata.username }} <br />
+              Mail: {{ userdata.mail }}
+            </p>
+            <button class="logout" (click)="goTohome()">Log Out</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="centerflex">
+        <!-- <select class="ip">
+      <option>Intresting Peoples </option>
+      <option>Business Peoples</option>
+      <option>Idea Peoples </option>
+      <option>Entertainment Peoples </option>
+      <option>Talented Peoples </option>
+      <option>Startup Plan Peoples </option>
+      <option>Create Your own tag + </option>
+    </select> -->
+
+        <div class="filterbtn" (click)="showfilter = !showfilter">
+          <img src="../../assets/img/filter.png" id="filterimg" />
+          <button class="pt-1">Tag Filter's</button>
+        </div>
+
+        <div class="filter" *ngIf="showfilter">
+          <label for="bp" class="text-lg pl-10">
+            <input type="checkbox" id="bp" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Business
+            People's</label
+          >
+          <label for="ip" class="text-lg pl-10">
+            <input
+              type="checkbox"
+              id="ip"
+            />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Idea People's</label
+          >
+          <label for="sp" class="text-lg pl-10">
+            <input
+              type="checkbox"
+              id="sp"
+            />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Startup
+            People's
+          </label>
+          <label for="ip1" class="text-lg pl-10">
+            <input
+              type="checkbox"
+              id="ip1"
+            />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Intresting
+            People's</label
+          >
+          <label for="sp1" class="text-lg pl-10">
+            <input
+              type="checkbox"
+              id="sp1"
+            />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sport's
+            People's</label
+          >
+          <div>
+            <button class="profileapply">Apply</button>
+            <button class="profilecancel">Cancel</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="contentbox" *ngFor="let user of users">
+            <div class="personcard" [routerLink]="['/profile', user.userid]">
+              <div>
+                <img src="{{ user.image }}" />
+              </div>
+              <div class="content">
+                <h5 class="contenttext">
+                  <b>Name:</b>{{ user.name }}<br /><b>Place:</b>{{ user.place }}
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- <app-singleprofile *ngIf="singleprofilepage" [receiver] = 'currentUser'></app-singleprofile> -->
