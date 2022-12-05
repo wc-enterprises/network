@@ -1,0 +1,11 @@
+<div class="w-[17vw]">
+    <button
+        class="items-center ml-[64vw] header pl-3 gap-2 flex bg-white hover:bg-gray-300 text-black font-semibold w-[6.5vw] h-[5vh] rounded-md mt-2 border-2 border-black"
+        (click)="showElements =!showElements">Profile<img class="mt-0.5 opacity-100"
+            src="/assets/images/profile.png"></button>
+</div>
+<mat-card class=" header w-[13vw] h-[14vh] bg-white mt-[0.5vh] ml-[60.6vw] text-center font-semibold text-black"
+    *ngIf="showElements">
+    Madhan<br>manmadhan177@gmail.com<br><button (click)="logout()"
+        class="header w-20 h-7 pb-2  bg-white text-black border-2 border-black rounded-md mt-1 font-semibold text-base ">Logout</button>
+</mat-card>

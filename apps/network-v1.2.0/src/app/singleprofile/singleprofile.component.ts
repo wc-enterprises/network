@@ -17,66 +17,6 @@ export class SingleprofileComponent implements OnInit {
 getid:any;   //this is the particular profile data after filtering with param
 userdata :any;  // this is profile username mail data
 
-
-// for next and prev
-
-  currentIndex: any;
-  currentUser
-
-ngOnInit(): void {
-
-
- this.oninit();
-
-  // profile data 
-
-     this.userdata = localStorage.getItem('User');
-    this.userdata = JSON.parse(this.userdata)
-
-    // for next and prev
-       const check = (x) => x.userid ==this.id;
-        console.log(this.users.some(check));
-        this.currentIndex = this.users.findIndex(
-          (users) => users.userid == this.id
-        );
-        console.log(this.currentIndex);
-        this.currentUser=this.users[this.currentIndex]
-
-    }
-
-
-    oninit(){
-         this.route.paramMap.subscribe((params: ParamMap) => {
-      if(params.get('id') !== null){
-          this.id =  params.get('id');
-
-       
-      }});
-
-  this.getid = this.users.find((user)=>user.userid === this.id)
-
-    }
-
-  
-  
-goTohome(){
-  this.router.navigate(['./home']);
-      localStorage.removeItem('User');
-        sessionStorage.removeItem('User');
-}
-goToaddprofile(){
-  this.router.navigate(['./addprofile']);
-}
-goToprofile(){
-
-  this.router.navigate(['./profile']);
- 
-}
-
-showelements : boolean = false;
-
-
-
 public users:{userid : any ;facebook : any;  name:  any  ; place :  any  ; image:  any ; category : any ; number : any  ; instagram :  any  ; linkedin :  any  ; description :  any  }[]=[
   {
   userid : "1",
@@ -177,6 +117,68 @@ userid  : "2",
   },
 
 ];
+showelements = false;
+
+// for next and prev
+
+  currentIndex: any;
+  currentUser:any;
+
+ngOnInit(): void {
+
+
+ this.oninit();
+
+  // profile data 
+
+     this.userdata = localStorage.getItem('User');
+    this.userdata = JSON.parse(this.userdata)
+
+    // for next and prev
+    
+       const check = (x:any) => x.userid ==this.id;
+        console.log(this.users.some(check));
+        this.currentIndex = this.users.findIndex(
+          (users) => users.userid == this.id
+        );
+        console.log(this.currentIndex);
+        this.currentUser=this.users[this.currentIndex]
+
+    }
+
+
+    oninit(){
+         this.route.paramMap.subscribe((params: ParamMap) => {
+      if(params.get('id') !== null){
+          this.id =  params.get('id');
+
+       
+      }});
+
+  this.getid = this.users.find((user)=>user.userid === this.id)
+
+    }
+
+  
+  
+goTohome(){
+  this.router.navigate(['./home']);
+      localStorage.removeItem('User');
+        sessionStorage.removeItem('User');
+}
+goToaddprofile(){
+  this.router.navigate(['./addprofile']);
+}
+goToprofile(){
+
+  this.router.navigate(['./profile']);
+ 
+}
+
+
+
+
+
 
   prev() {
     if (this.currentUser=== this.getid) {
