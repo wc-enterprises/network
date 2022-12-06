@@ -1,0 +1,160 @@
+*{
+    margin: 0%;
+}
+#outerbox{
+    position: relative;
+    height:100%;
+    width:100%;
+    margin-top: 0%;
+}
+#innerbox{
+    position: absolute;
+    background-repeat:no-repeat;
+    background-image: url("/assets/images/spider.png");
+    height: 100%;
+    width:100%;
+    background-size: cover;
+}
+#navigationbar{
+    height: 70px;
+    border-bottom:3px solid #ffffff;
+    position: absolute;
+    width: 100%;
+    display: flex;
+}
+#logo{
+    background-color:#ffffff;
+    height: 50px;
+    width: 203.88px;
+    display: flex;
+    margin-top:10px;
+    margin-left:60px;
+}
+.networkfont{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    font-size:28px;
+    margin-left:14px;
+    margin-top: 15px;
+}
+.networklogo{
+    width:35.88px;
+    height:50px;
+    margin-left: 13px;
+}
+.signupbutton{
+    width:76px;
+    height:38px;
+    margin-left: 950px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 8px;
+    margin-top: 19px;
+}
+.loginbox{
+    height: 300px;
+    width: 600px;
+    margin-top: 220px;
+    margin-left: 384px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid #000000;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+}
+.loginbutton{
+    width: 84px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 250px;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+    color: #000000;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 18px;
+}
+#name{
+    width: 300px;
+    height: 45px;
+    margin-top: 20px;
+    margin-left: 140px;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+    color: #000000;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.unamecontent{
+  display: flex;
+  flex-direction: row;
+    width:200px;
+    height: 60px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 10px;
+}
+/* .unamecontentbox{
+    margin-top: 3px;
+    margin-bottom: 3px;
+   
+    
+} */
+.unamerequired{
+    color: red;
+    text-align: center;
+    margin-left: 140px;
+    
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Dosis', sans-serif;
+}
+#pwd{
+    width: 300px;
+    height: 45px;
+    margin-top: 20px;
+    margin-left: 140px;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+    color: #000000;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.pwordcontent{
+    display: flex;
+  flex-direction: row;
+    width:500px;
+    height: 60px;
+    justify-items: center;
+    align-items: center;
+   margin-top: 15px;
+}
+.pwordrequired{
+    color: red;
+    margin-left: 120px;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Dosis', sans-serif;
+}
+#submitbutton{
+    width: 64px;
+    height: 33px;
+    margin-top: 25px;
+    margin-left: 263px;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+    color: #000000;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+

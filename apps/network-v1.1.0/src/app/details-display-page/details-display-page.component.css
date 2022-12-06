@@ -1,0 +1,332 @@
+*{
+    margin: 0%;
+}
+#outerbox{
+    position: relative;
+    height:100%;
+    width:100%;
+    margin-top: 0%;
+}
+#innerbox{
+    position: absolute;
+    background-repeat:no-repeat;
+    background-image: url("/assets/images/spider.png");
+    height: 100%;
+    width:100%;
+    background-size: cover;
+}
+#navigationbar{
+    height: 70px;
+    border-bottom:3px solid #ffffff;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    left: 0px;
+    top: 0px;
+}
+#logo{
+    background-color:#ffffff;
+    height: 50px;
+    width: 203.88px;
+    display: flex;
+    margin-top:10px;
+    margin-left:60px;
+}
+.networkfont{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    font-size:28px;
+    margin-left:14px;
+    margin-top: 15px;
+}
+.networklogo{
+    width:35.88px;
+    height:50px;
+    margin-left: 13px;
+}
+#addbutton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 16px;
+    position: absolute;
+    width: 65px;
+    height: 38px;
+    left: 330px;
+    top: 17px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-family: 'Dosis';
+    font-weight: 600;
+    font-size: 16px;
+}
+#profilebutton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 10px;
+    position: absolute;
+    width: 97px;
+    height: 37px;
+    left: 1150px;
+    top: 17px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-family: 'Dosis';
+    font-weight: 600;
+    font-size: 16px;
+    gap: 9px;
+}
+.profilelogo{
+    width: 25px;
+    height: 24px;
+}
+#profilecontentbox{
+    position: absolute;
+    width: 170px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #000000;
+    border-radius: 8px;
+    margin-left: 1110px;
+    margin-top: 54px;
+    display: flex;
+    flex-direction: column;
+    z-index:8;
+}
+.profilename{
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 3px;
+    color: #000000;
+    flex-direction: column;
+    margin-top: 12px;
+}
+.logoutbutton{
+    box-sizing: border-box;
+    position: absolute;
+    width: 55px;
+    height: 26px;
+    left: 58px;
+    top: 54px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    text-align: right;
+}
+#showbox{
+    position: absolute;
+    width: 900px;
+    height: 470px;
+    left: 250px;
+    top: 115px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 24px;
+    z-index:1;
+}
+#backbutton{
+    position: absolute;
+    width: 80px;
+    height: 32px;
+    left: 50px;
+    top: 21px;
+    background: #2F4550;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    display: flex;
+    gap: 8px;
+    font-family: 'Dosis';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    align-items: center;
+    text-align: right;
+    color: #FFFFFF;
+}
+.backlogo{
+    width: 25px;
+    height: 24px;
+    align-items: center;
+    margin-top: 5px;
+}
+#detailbutton{
+    position: absolute;
+    width: 200px;
+    height: 35px;
+    left: 330px;
+    top: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #000000;
+    border-radius: 6px;
+    font-family: 'Dosis';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+}
+.swipelogo{
+    width: 28px;
+    height: 24px;
+}
+#leftswipe{
+    width: 30px;
+    height: 26px;
+    margin-left:  50px;
+    margin-top:  225px;
+}
+#rightswipe{
+    width: 30px;
+    height: 26px;
+    margin-left: 740px;
+}
+#detailbox{
+    position: absolute;
+    width: 660px;
+    top: 90px;
+    height: 350px;
+    left: 120px;
+    background: rgba(47, 69, 80, 0.7);
+    border: 1px solid #000000;
+    display: flex;
+}
+#photobox{
+    width: 240px;
+    height: 310px;
+}
+.photo{
+    width: 230px;
+    height: 330px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+#detailshowbox{
+    width: 400px;
+    height: 330px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#Namebox{
+    height: 123px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.55);
+}
+.namedetail{
+    height: 38px;
+    width: 400px;
+    
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #000000;
+}
+.tagdetail{
+    height: 75px;
+    width: 400px;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    text-align:center;
+    color: #000000;
+}
+#Contentbox{
+    height: 205px;
+    width: 400px;
+   
+    display: flex;
+    flex-direction: column;
+}
+.contactdetail{
+    height: 38px;
+    width: 400px;
+    
+    display: flex;
+    flex-direction: row;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.contactdetail1{
+    display: flex;
+    flex-direction: row; 
+    margin-left: 115px;
+}
+.mediadetail{
+    height: 38px;
+    width: 400px;
+    
+    display: flex;
+    flex-direction: row;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.mediadetail1{
+    display: flex;
+    flex-direction: row; 
+    margin-left: 75px;
+}
+.socialdetail{
+    height: 38px;
+    width: 400px;
+    
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+}
+.mediapicture{
+width: 25px;
+height: 25px;
+padding: 6px;
+
+}
+.describedetail{
+    height: 91px;
+    width: 400px;
+    
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction:row;
+    line-height: 20px;
+}

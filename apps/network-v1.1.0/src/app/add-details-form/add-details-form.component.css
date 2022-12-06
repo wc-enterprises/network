@@ -1,0 +1,264 @@
+*{
+    margin: 0%;
+}
+#outerbox{
+    position: relative;
+    height:100%;
+    width:100%;
+    margin-top: 0%;
+}
+#innerbox{
+    position: absolute;
+    background-repeat:no-repeat;
+    background-image: url("/assets/images/spider.png");
+    height: 100%;
+    width:100%;
+    background-size: cover;
+}
+#navigationbar{
+    height: 70px;
+    border-bottom:3px solid #ffffff;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    left: 0px;
+    top: 0px;
+}
+#logo{
+    background-color:#ffffff;
+    height: 50px;
+    width: 203.88px;
+    display: flex;
+    margin-top:10px;
+    margin-left:60px;
+}
+.networkfont{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    font-size:28px;
+    margin-left:14px;
+    margin-top: 15px;
+}
+.networklogo{
+    width:35.88px;
+    height:50px;
+    margin-left: 13px;
+}
+#addbutton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 16px;
+    position: absolute;
+    width: 65px;
+    height: 38px;
+    left: 330px;
+    top: 17px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-family: 'Dosis';
+    font-weight: 600;
+    font-size: 16px;
+}
+#profilebutton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 10px;
+    position: absolute;
+    width: 97px;
+    height: 37px;
+    left: 1150px;
+    top: 17px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-family: 'Dosis';
+    font-weight: 600;
+    font-size: 16px;
+    gap: 9px;
+}
+.profilelogo{
+    width: 25px;
+    height: 24px;
+}
+#profilecontentbox{
+    position: absolute;
+    width: 170px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #000000;
+    border-radius: 8px;
+    margin-left: 1110px;
+    margin-top: 54px;
+    display: flex;
+    flex-direction: column;
+    z-index:8;
+}
+.profilename{
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 3px;
+    color: #000000;
+    flex-direction: column;
+    margin-top: 12px;
+}
+.logoutbutton{
+    box-sizing: border-box;
+    position: absolute;
+    width: 55px;
+    height: 26px;
+    left: 58px;
+    top: 54px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    text-align: right;
+}
+#showbox{
+    position: absolute;
+    width: 900px;
+    height: 500px;
+    left: 235px;
+    top:110px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid #000000;
+    border-radius: 24px;
+    z-index:1;
+}
+#tagbutton{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 350px;
+    top: 17px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #000000;
+    border-radius: 6px;
+    font-family: 'Dosis';
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+}
+form{
+    display: flex;
+}
+#showbox1{
+    width: 800px;
+    height: 420px;
+    margin-left: 50px;
+    margin-top: 70px;
+    display: flex;
+
+}
+#showbox2{
+    width: 400px;
+    height: 420px;
+
+}
+
+.typebutton{
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 45px;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+    color: #000000;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.tagbutton{
+    width: 314px;
+    height: 43px;
+    margin-top: 20px;
+    margin-left: 45px;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+    color: gray;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 5px;
+}
+#profilepic{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 45px;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+    color: #000000;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.photofont{
+    font-weight: 600;
+    color: gray;
+}
+.profilecontent{
+    margin-top: 4px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+}
+
+.describebutton{
+    width: 300px;
+    height: 106px;
+    margin-top: 20px;
+    margin-left: 45px;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+    color: #000000;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 10px;
+}
+#showbox3{
+    width: 400px;
+    height: 350px;
+
+}
+.submitbutton{
+    margin-top: 100px;
+    margin-left: -5px;
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-family: 'Dosis';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+}
+.example-chip-list {
+    width: 100%;
+  }

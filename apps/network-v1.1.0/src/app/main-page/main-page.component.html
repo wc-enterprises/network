@@ -1,0 +1,192 @@
+<html *ngIf="showMainPage">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6e416a56bb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+     <div id="outerbox">
+      <div id="innerbox">
+        <div id="navigationbar">
+        <div id="logo"> 
+          <img class="networklogo"  src="/assets/images/network.png">
+          <span class="networkfont">NETWORK</span>
+        </div>
+        <div><button routerLink="/adddetailsform" id="addbutton">+Add</button></div>
+        <div>
+            <button  id="profilebutton" (click)="showElements=!showElements">Profile <img class="profilelogo" src="/assets/images/dropdown.png"> 
+            </button>
+        </div>
+        
+        </div>
+        <div id="profilecontentbox" *ngIf="showElements">
+          <p class="profilename"> &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  {{ userdata.username }} 
+            <br><br><br><br><br><br><br><br>
+              &nbsp;   {{ userdata.mail }}
+          </p>
+          <button class="logoutbutton" (click)=" Logout()">Logout</button>
+      </div>
+      
+      <div id="showbox">
+        <div id="filterbox">
+      <button id="showbutton" (click)="showElements1=!showElements1"> <img class="profilelogo" src="/assets/images/filter.png"> Tag Filter's
+      </button>
+      <div *ngIf="showElements1"><form>
+        <fieldset>
+          <div>
+            
+            <input type="checkbox" id="Intresting" name="interest" value="Intresting" /> &nbsp;
+            <label for="Intresting">Intresting People's</label>
+           </div>
+          <div>
+            
+            <input type="checkbox" id="Business" name="interest" value="Business" /> &nbsp;
+            <label for="Business">Business People's</label>
+            </div>
+          <div>
+            
+            <input type="checkbox" id="Idea" name="interest" value="Idea" /> &nbsp;
+            <label for="Idea">Idea People's</label>
+            </div>
+          <div>
+           
+            <input type="checkbox" id="Entertainment" name="interest" value="Entertainment" /> &nbsp;
+            <label for="Entertainment">Entertainment People's</label>
+           </div>
+          <div>
+            
+            <input type="checkbox" id="Talented" name="interest" value="Talented" /> &nbsp;
+            <label for="Talented">Talented People's</label>
+            </div>
+            <div>
+              
+              <input type="checkbox" id="Startup" name="interest" value="Startup" /> &nbsp;
+              <label for="Startup">Startup plan People's</label>
+              </div>
+              <div id="selectorbox">
+                <button class="selector"><p class="selectbutton"> Apply</p>
+                </button>
+                <button class="selector"> <p class="selectbutton">Cancel</p>
+                </button>
+              </div>
+          </fieldset>
+          
+      </form>
+    </div>
+      </div>
+      <div class="scrollbox">
+      <div class="cardbox" *ngFor="let user of users" [routerLink]="['/detailsdisplaypage',user.userid]" >
+        <div class="card" (click)="selectCurrentUser(user)">
+            <div class="imagebox">
+            <img class="image" src="{{user.image}}">
+            </div>
+            <div class="contentbox">
+            <h5 class="contentfont">Name:{{user.name}}<br>Place:{{user.place}}</h5>
+            </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      </div>
+     </div>
+  </body>
+</html>
+
+
+
+
+
+<!-- <app-details-display-page *ngIf="showDetailsDisplayPage" [receiver]="currentUser"></app-details-display-page> -->
+
+<!-- <html *ngIf="showMainPage">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6e416a56bb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+     <div id="outerbox">
+      <div id="innerbox">
+        <div id="navigationbar">
+        <div id="logo"> 
+          <img class="networklogo"  src="/assets/images/network.png">
+          <span class="networkfont">NETWORK</span>
+        </div>
+        <div><button routerLink="/adddetailsform" id="addbutton">+Add</button></div>
+        <div>
+            <button  id="profilebutton" (click)="showElements=!showElements">Profile <img class="profilelogo" src="/assets/images/dropdown.png"> 
+            </button>
+        </div>
+        
+        </div>
+        <div id="profilecontentbox" *ngIf="showElements">
+          <p class="profilename"> &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Arunkumar <br><br><br><br><br><br><br><br>
+              &nbsp;   arunjothi2599@gmail.com
+          </p>
+          <button class="logoutbutton">Logout</button>
+      </div>
+      
+      <div id="showbox">
+        <div id="filterbox">
+      <button id="showbutton" (click)="showElements1=!showElements1"> <img class="profilelogo" src="/assets/images/filter.png"> Tag Filter's
+      </button>
+      <div *ngIf="showElements1"><form>
+        <fieldset>
+          <div>
+            
+            <input type="checkbox" id="Intresting" name="interest" value="Intresting" /> &nbsp;
+            <label for="Intresting">Intresting People's</label>
+           </div>
+          <div>
+            
+            <input type="checkbox" id="Business" name="interest" value="Business" /> &nbsp;
+            <label for="Business">Business People's</label>
+            </div>
+          <div>
+            
+            <input type="checkbox" id="Idea" name="interest" value="Idea" /> &nbsp;
+            <label for="Idea">Idea People's</label>
+            </div>
+          <div>
+           
+            <input type="checkbox" id="Entertainment" name="interest" value="Entertainment" /> &nbsp;
+            <label for="Entertainment">Entertainment People's</label>
+           </div>
+          <div>
+            
+            <input type="checkbox" id="Talented" name="interest" value="Talented" /> &nbsp;
+            <label for="Talented">Talented People's</label>
+            </div>
+            <div>
+              
+              <input type="checkbox" id="Startup" name="interest" value="Startup" /> &nbsp;
+              <label for="Startup">Startup plan People's</label>
+              </div>
+              <div id="selectorbox">
+                <button class="selector"> <img class="selectbutton" src="/assets/images/tick.png"> 
+                </button>
+                <button class="selector"> <img class="selectbutton" src="/assets/images/refresh.png"> 
+                </button>
+                <button class="selector"> <img class="selectbutton" src="/assets/images/cancel.png"> 
+                </button>
+              </div>
+          </fieldset>
+          
+      </form>
+    </div>
+      </div>
+      <div class="showbox1">
+      <div class="cardbox" *ngFor="let user of users" >
+        <div class="card" (click)="selectCurrentUser(user)">
+            <div class="imagebox">
+            <img class="image" src="{{user.image}}">
+            </div>
+            <div class="contentbox">
+            <h5 class="contentfont">Name:{{user.name}}<br>Place:{{user.place}}</h5>
+            </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      </div>
+     </div>
+  </body>
+</html> -->

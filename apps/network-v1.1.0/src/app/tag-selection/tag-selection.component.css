@@ -1,0 +1,38 @@
+  .example-chip-list {
+    width: 314px;
+    height: 43px;
+    background: white;
+    margin-top: 20px;
+    margin-left: 45px;
+    font-size: 12px;
+  }
+  ::placeholder {
+    color: gray;
+    opacity: 2;
+    font-family: 'Dosis', sans-serif;
+   /* width: 314px;
+    height: 43px;
+    margin-top: 20px;
+    margin-left: 45px;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+    color: gray;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 5px; */
+   
+  }
+  /* .header{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    color: gray;
+  } */
+  .tagoption{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    color: gray;
+    font-size: 12px;
+  }
+  
+  

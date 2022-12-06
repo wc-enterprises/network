@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6e416a56bb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+     <div id="outerbox">
+      <div id="innerbox">
+
+        <div id="navigationbar">
+        <div id="logo"> 
+          <img class="networklogo"  src="/assets/images/network.png">
+          <span class="networkfont">NETWORK</span>
+        </div>
+        <div><button routerLink="/adddetailsform"  id="addbutton">+Add</button></div>
+        <div>
+            <button  id="profilebutton" (click)="showElements=!showElements">Profile <img class="profilelogo" src="/assets/images/dropdown.png"> 
+            </button>
+        </div>
+        <div id="profilecontentbox" *ngIf="showElements">
+            <p class="profilename"> &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Arunkumar <br><br><br><br><br><br><br><br>
+                &nbsp;   arunjothi2599@gmail.com
+            </p>
+            <button class="logoutbutton"  (click)=" Logout()">Logout</button>
+        </div>
+       </div>
+       <!-- <mat-paginator> -->
+       <div id="showbox">
+        <button routerLink="/mainpage"  id="backbutton"> <img  class="backlogo"  src="/assets/images/dpleft.png">Back</button>
+        <span id="detailbutton">Person Detail's</span>
+         <img id="leftswipe"  (click)="prev()" src="/assets/images/ddleft.png">
+         <img id="rightswipe" (click)="next()" src="/assets/images/ddright.png">
+         <div id="detailbox">
+         <div id="photobox"><img class="photo"  src={{currentUser.image}}>
+          <!-- <img class="photo"  src="/assets/images/arun.png"> -->
+        </div>
+         <!-- <div id="detailshowbox"><p>{{receiver.name}} <br>Intresting People <br>Neyveli<br> 8220710738 <br> _arunvjcopzz_<br>
+            https://www.linkedin.com/in/arun2599/ <br>
+            I have always been interested in web development, and 
+            I have the necessary skills required for the role. 
+            I have a good understanding of HTML, CSS, JavaScript.</p></div> -->
+            <div id="detailshowbox" >
+              <span id="Namebox">
+                <span class="namedetail"> <p>{{currentUser.name}} </p></span>
+                <!-- <span class="tagdetail"><p>  &nbsp;&nbsp;&nbsp; Intresting people, Idea people, Business people
+                  Startup people, Sport people, Party people, Model people, Helping people,Sport people </p></span> -->
+                  <span class="tagdetail"> <p>{{currentUser.category}} </p></span>
+              </span>
+              <span id="Contentbox">
+                <span class="contactdetail"><img class="mediapicture"   src="/assets/images/location.png"><p>{{currentUser.place}}</p> 
+                  <span class="contactdetail1">  <img class="mediapicture"   src="/assets/images/phone.png"><p>{{currentUser.number}}</p></span>
+                  </span>
+                <span class="mediadetail"><img class="mediapicture"   src="/assets/images/instagram.png"><p>{{currentUser.instagram}}</p> 
+                <span class="mediadetail1">  <img class="mediapicture"   src="/assets/images/facebook.png"><p>{{currentUser.facebook}}</p></span>
+                </span>
+                <span class="socialdetail"><img class="mediapicture"   src="/assets/images/linkedin.png"> <p>{{currentUser.linkedin}}</p></span>
+                <div class="describedetail"><img class="mediapicture"   src="/assets/images/describe.png">
+                 <!-- <div> <p>I am so thankful that you’re in my life, and I want to take the time to tell you how
+                   much I truly appreciate you. You’re not only a great listener, but you also give the best advice. 
+                   Whenever I need guidance, I know I can turn to you.</p></div>  -->
+                   <div><p>{{currentUser.description}}</p></div>
+                  </div>
+              </span>
+            </div>
+         </div>
+       </div>
+      <!-- </mat-paginator> -->
+      </div>
+     </div>
+  </body>
+</html>
+

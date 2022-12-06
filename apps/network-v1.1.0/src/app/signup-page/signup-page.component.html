@@ -1,0 +1,85 @@
+<!-- <html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id="outerbox">
+            <div id="innerbox">
+              <div id="navigationbar">
+              <div id="logo"> 
+                <img class="networklogo"  src="/assets/images/network.png">
+                <span class="networkfont">NETWORK</span>
+              </div>
+              </div>
+              <form  [formGroup] ="signupform" (ngSubmit)="onSubmit()" >
+                <div class="signupbox">
+                <span ><button class="signupbutton">SignUp</button></span>
+                <input type="email" id="email" name="email"  placeholder="Email Id..." formControlName="mail">
+                
+                <div><input type="text" id="name" name="name" placeholder="Username..." formControlName="username"></div>
+                <div><input type="text" id="pwd" name="pwd" placeholder="Password..." formControlName="pw"></div>
+
+                <span ><button routerLink="/mainpage" id="submitbutton"  > Submit </button></span>
+
+                </div>
+              </form>
+            </div>
+           </div>
+    </body>
+</html> -->
+
+<!-- <html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id="outerbox">
+            <div id="innerbox">
+              <div id="navigationbar">
+              <div id="logo"> 
+                <img class="networklogo"  src="/assets/images/network.png">
+                <span class="networkfont">NETWORK</span>
+              </div>
+              </div>
+              <div class="signupbox">
+                <span ><button class="signupbutton">SignUp</button></span>
+                <input type="email" id="email" name="email"  placeholder="Email Id..." >
+                
+                <div><input type="text" id="name" name="name" placeholder="Username..."></div>
+                <div><input type="text" id="pwd" name="pwd" placeholder="Password..."></div>
+                <span ><button routerLink="/mainpage" class="submitbutton">Submit</button></span>
+              </div>
+            </div>
+           </div>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id="outerbox">
+            <div id="innerbox">
+              <div id="navigationbar">
+              <div id="logo"> 
+                <img class="networklogo"  src="/assets/images/network.png">
+                <span class="networkfont">NETWORK</span>
+              </div>
+              </div>
+              <form class="signupbox" [formGroup]="signuppage" (ngSubmit)="onSubmit()">
+               <button class="signupbutton">SignUp</button>
+              
+                <input type="email" id="email" name="email" formControlName="mail" value="" placeholder="Email Id..." >
+              
+               
+                <input type="text" id="name" name="name" formControlName="username" value="" placeholder="Username...">
+                
+              
+                <div><input type="text" id="pwd" name="pwd" formControlName="password" value="" placeholder="Password..."></div>
+                <span ><button [disabled]="signuppage.invalid" (click)="goTomainpage" class="submitbutton">Submit</button></span>
+              </form>
+            </div>
+           </div>
+    </body>
+</html>
