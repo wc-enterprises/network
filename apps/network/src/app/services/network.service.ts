@@ -25,6 +25,7 @@ export function login(data: unknown) {
 }
 
 export function createContact(data: unknown) {
+  console.log('data', data);
   const config: AxiosRequestConfig = {
     method: 'POST',
     url: 'http://localhost:3000/contact/add-contact-to-user',
