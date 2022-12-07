@@ -3,7 +3,7 @@ import { MatSliderChange } from '@angular/material/slider';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { STRING_TYPE } from '@angular/compiler';
-import { getAllContacts } from '../services/network.service';
+import { getAllContacts, login } from '../services/network.service';
 
 @Component({
   selector: 'app-loginpage',
@@ -42,13 +42,20 @@ export class LoginpageComponent implements OnInit {
     this.router.navigate(['./welcome']);
   }
 
-  onSubmit() {
+  async onSubmit() {
     sessionStorage.setItem('User', JSON.stringify(this.loginpage.value));
 
     this.signupdata = localStorage.getItem('User');
     this.logindata = sessionStorage.getItem('User');
     this.signupdata = JSON.parse(this.signupdata);
     this.logindata = JSON.parse(this.logindata);
+
+    const res = await login({
+      username: this.loginpage.value.username,
+      password: this.loginpage.value.password,
+    });
+
+    localStorage.setItem('userId', res.data.data.userId);
 
     console.log('This is signupdata  ' + this.signupdata.mail);
     console.log('This is login data  ' + this.logindata.username);
