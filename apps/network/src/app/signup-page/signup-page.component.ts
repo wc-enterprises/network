@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { signUp } from '../services/network.service';
 
 @Component({
   selector: 'app-signup-page',
@@ -23,8 +24,16 @@ export class SignupPageComponent {
   goToprofile() {
     this.router.navigate(['./loginpage']);
   }
-  onSubmit() {
+  async onSubmit() {
     localStorage.setItem('User', JSON.stringify(this.signuppage.value));
+    const data = {
+      email: this.signuppage.value.mail,
+      username: this.signuppage.value.username,
+      password: this.signuppage.value.password,
+    };
+    const res = await signUp(data);
+    console.log('res from signup endpoint', res.data);
+    localStorage.setItem('userId', res.data.data.userId);
     this.signuppage.reset();
     this.goToprofile();
   }
