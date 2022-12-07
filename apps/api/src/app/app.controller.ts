@@ -1,4 +1,14 @@
-import { Body, Controller, Get, Logger, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Logger,
+  Param,
+  Post,
+  Query,
+  Req,
+  Res,
+} from '@nestjs/common';
 import { AppService } from './app.service';
 import { error } from './utils/error-codes';
 import {
@@ -85,10 +95,10 @@ export class AppController {
   }
 
   @Get('get-all-contacts-of-user')
-  getAllContactsOfUser(@Body() data: { userId: string }): any {
+  getAllContactsOfUser(@Query('userId') userId: string): any {
     //Validations
-    if (!data.userId) return responseObj('ERROR', error.isRequired('userId'));
-    return this.appService.getAllContactsOfUser(data.userId);
+    if (!userId) return responseObj('ERROR', error.isRequired('userId'));
+    return this.appService.getAllContactsOfUser(userId);
   }
 
   /**
@@ -111,15 +121,17 @@ export class AppController {
   }
 
   @Get('get-tags-of-user')
-  getTagsOfUser(@Body() data: { userId: string }): any {
+  getTagsOfUser(@Query('userId') userId: string): any {
     try {
-      this.logger.log(`getTagsOfUser called with data ${JSON.stringify(data)}`);
+      this.logger.log(
+        `getTagsOfUser called with data ${JSON.stringify(userId)}`
+      );
 
       //Validating if mandatory param present.
-      if (!data.userId)
+      if (!userId)
         return responseObj('ERROR', error.missingMandatoryParam('userId'));
 
-      return this.appService.getTagsOfUser(data);
+      return this.appService.getTagsOfUser({ userId });
     } catch (err) {
       this.logger.error(
         `Unhandled error occured while fetching tags of user. ${err.message}`
