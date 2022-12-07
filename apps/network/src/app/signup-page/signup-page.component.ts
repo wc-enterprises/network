@@ -35,7 +35,8 @@ export class SignupPageComponent {
     console.log('res from signup endpoint', res.data);
     localStorage.setItem('userId', res.data.data.userId);
     this.signuppage.reset();
-    this.goToprofile();
+    if (res.data.status === 'SUCCESS') this.goToprofile();
+    else alert('Sigup failed');
   }
 
   get vmail() {

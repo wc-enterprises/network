@@ -63,10 +63,7 @@ export class LoginpageComponent implements OnInit {
     //  this.loginform = JSON.parse(this.loginform)
     //  console.log(this.loginform.controls.usname.value)
 
-    if (
-      this.signupdata.username == this.logindata.username &&
-      this.signupdata.password == this.logindata.password
-    ) {
+    if (res.data.status === 'SUCCESS') {
       this.goToprofilepage();
     } else {
       alert('Check Your Credentials');
